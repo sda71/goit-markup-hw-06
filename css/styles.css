@@ -189,6 +189,9 @@ body {
 .form-foot-input {
   width: 264px;
   height: 40px;
+  padding: 8px 16px;
+  background-color: transparent;
+  color: #babac2;
   border: 1px solid #ffffff4d;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
@@ -650,6 +653,8 @@ body {
   cursor: pointer;
   background-color: var(--third-color);
   border: 1px solid #d9d9d9;
+  transition: background-color 250ms var(--transition-func),
+    fill 250ms var(--transition-func);
 }
 
 .modal-icon {
@@ -657,8 +662,6 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  transition: background-color 250ms var(--transition-func),
-    color 250ms var(--transition-func);
 }
 
 .modal-btn:is(:hover, :focus) {
@@ -681,17 +684,20 @@ body {
   margin-top: 0;
 }
 .form-field-contacts {
-  margin-bottom: 4px;
+  margin-bottom: 8px;
 }
 .form-label-contacts {
+  display: block;
+  margin-bottom: 4px;
 }
 .input-wrapper-contacts {
   position: relative;
 }
 .form-input-contacts {
   width: 100%;
+  height: 40;
   margin: 0;
-  padding: 11px 38px;
+  padding: 8px 38px;
   font: inherit;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
@@ -735,9 +741,13 @@ textarea::placeholder {
   display: flex;
   flex-direction: column;
 }
+.form-label-comments {
+  margin-bottom: 4px;
+}
 .textarea-comments {
   width: 360px;
   height: 120px;
+  resize: none;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   padding: 8px 16px;
